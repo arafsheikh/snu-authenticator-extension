@@ -19,8 +19,7 @@
         "default_popup": "popup.html"
     },
     "permissions": [
-        "http://*/*",
-        "https://*/*",
+        "http://192.168.50.1/*",
         "storage",
         "background"
     ],
