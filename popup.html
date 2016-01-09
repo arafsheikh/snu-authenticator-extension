@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>SNU Authenticator</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+        margin-bottom: 15px;
+        color: green;
+      }
+      #save, #reset {
+        margin-top: 5px;
+        margin-right: 5px;
+      }
+      .label {
+        padding-top: 5px;
+      }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div id="status"></div>
+    
+    <label class="label">SNU NET ID: </label><input type="text" id="snuid" value="">
+    <label class="label">Password: </label><input type="password" id="password" value="">
+    <label class="label">Retype password: </label><input type="password" id="password2" value="">
+    <button id="save">Save</button>
+    <button id="reset">Reset</button>
+    </div>
+  </body>
+</html>

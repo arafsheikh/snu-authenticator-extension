@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+
+    "name":  "SNU Authenticator",
+    "description": "Automatically login to the Shiv Nadar University network.",
+    "version": "1.0",
+    "icons": {
+        "19": "icons/snu_19px.png",
+        "48": "icons/snu_48px.png",
+        "128": "icons/snu_128px.png"
+    },
+
+    "browser_action": {
+        "default_icon": {
+                "19": "icons/snu_19px.png",
+                "48": "icons/snu_48px.png",
+                "128": "icons/snu_128px.png"
+            },
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "http://*/*",
+        "https://*/*",
+        "storage",
+        "background"
+    ],
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+
+    "update_url": "http://sheikharaf.me/data/snu_update_info.xml"
+}
