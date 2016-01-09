@@ -1,8 +1,10 @@
 console.log("Background script running...");
 
-// Logs the user in or out based on the 'code' parameter passed.
-// "191" --> Log-in
-// "193" --> Log-out
+/**
+* Logs the user in or out based on the 'code' parameter passed.
+* "191" --> Log-in
+* "193" --> Log-out
+*/
 function login_logout (code) {
     var snuid = "";
     var password = "";
