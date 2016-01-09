@@ -4,11 +4,15 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Save SNU NET ID and Password to local storage
   chrome.storage.local.get("snuid", function(data) {
-    document.getElementsByTagName('input')[0].value = data.snuid;
+    if (data.snuid !== undefined) {
+      document.getElementsByTagName('input')[0].value = data.snuid;
+    }
   });
   chrome.storage.local.get("password", function(data) {
-    document.getElementsByTagName('input')[1].value = data.password;
-    document.getElementsByTagName('input')[2].value = data.password;
+    if (data.password !== undefined) {
+      document.getElementsByTagName('input')[1].value = data.password;
+      document.getElementsByTagName('input')[2].value = data.password;
+    }
   });
 
   btnSave.addEventListener('click', function() {
