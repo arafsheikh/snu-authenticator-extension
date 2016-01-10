@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   var btnSave = document.getElementById('save');
   var btnReset = document.getElementById('reset');
+  var btnForceLogin = document.getElementById('force-login');
   
   // Save SNU NET ID and Password to local storage
   chrome.storage.local.get("snuid", function(data) {
@@ -12,6 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (data.password !== undefined) {
       document.getElementsByTagName('input')[1].value = data.password;
       document.getElementsByTagName('input')[2].value = data.password;
+
+      // Turn on force-login button
+      btnForceLogin.disabled = false;
     }
   });
 
@@ -55,6 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
       btnSave.disabled = false;
     });
   });
+
+  btnForceLogin.addEventListener('click', login_logout("191"));
 });
 
 /**

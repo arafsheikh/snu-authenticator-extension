@@ -3,7 +3,7 @@
 
     "name":  "SNU Authenticator",
     "description": "Automatically login to the Shiv Nadar University network.",
-    "version": "1.1",
+    "version": "1.2",
     "icons": {
         "19": "icons/snu_19px.png",
         "48": "icons/snu_48px.png",
