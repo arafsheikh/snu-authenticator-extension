@@ -37,4 +37,4 @@ function login_logout (code) {
     
 }
 
-chrome.windows.onCreated.addListener(login_logout("191")); // log-in
+chrome.runtime.onStartup.addListener(login_logout("191")); // log-in
