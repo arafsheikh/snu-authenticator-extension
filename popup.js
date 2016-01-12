@@ -60,7 +60,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  btnForceLogin.addEventListener('click', login_logout("191"));
+  btnForceLogin.addEventListener('click', function() {
+    login_logout("191");
+    document.getElementById('status').innerHTML = "Login success";
+    
+    chrome.notifications.create(
+      'login-notification',{   
+      type: 'basic', 
+      iconUrl: 'icons/snu_128px.png', 
+      title: "SNU Authenticator", 
+      message: "You have been logged-in.",
+      buttons: [{
+            title: "Dismiss",
+            iconUrl: "/icons/close.png"
+        }]
+    }, function() {} );
+  });
+
 });
 
 /**
