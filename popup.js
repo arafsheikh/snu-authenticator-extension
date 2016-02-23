@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   btnForceLogin.addEventListener('click', function() {
+    login_logout("193");
     login_logout("191");
     document.getElementById('status').innerHTML = "Login success";
     
